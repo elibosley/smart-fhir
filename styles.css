@@ -27,3 +27,7 @@ h2 {
   text-transform: lowercase;
   font-weight: bold;
 }
+.profile-picture {
+  width: 150px;
+  height: 150px;
+}
