@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <script src="https://rawgithub.com/smart-on-fhir/client-js/master/dist/fhir-client.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const smart = FHIR.client({
+                serviceUrl: 'https://r2.smarthealthit.org',
+                patientId: '86b1134b-3cbe-4432-bad6-9049c9c2c922'
+            });
+
+            smart.patient.read().then(function (pt) {
+                const firstName = pt.name[0].given;
+                const lastName = pt.name[0].family;
+                document.getElementById('patient-name').textContent = `${firstName} ${lastName}`;
+                document.getElementById('birthdate').textContent = `${pt.birthDate}`;
+                document.getElementById('gender').textContent = `${pt.gender}`;
+            });
+
+            const immunizationRecord = smart.patient.api.search({ type: 'Immunization' });
+
+            const immunizationList = document.getElementById('immunization-list');
+            immunizationRecord.done(immunizations => {
+                immunizations.data.entry.map((item) => { console.log(item); immunizationList.innerHTML += `<li>${item.resource.vaccineCode.text}</li>` });
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row title-box">
+            <h1>immunity.app</h1>
+        </div>
+
+        <div class="row patient-box">
+            <img src="assets/profile_placeholder.png" alt="profile picture" class="img-responsive">
+            <div class="patient-info">
+                <h2 id="patient-name" />
+                <h4 id="birthdate" />
+                <h4 id="gender" />
+            </div>
+        </div>
+
+        <div>
+            <h4>Birth</h4>
+            <div class="row">
+                <div class="col">Hepatitus B</div>
+                <div class="col">Administered</div>
+            </div>
+        </div>
+        <div>
+            <h4>1 month</h4>
+            <div class="pull-right upcoming">between months 1 and 2</div>
+        </div>
+        <div>
+            <h4>2 months</h4>
+            <div class="pull-right upcoming">between months 1 and 2</div>
+            <div class="pull-right upcoming">upcoming</div>
+        </div>
+        <div>
+            <h4>4 months</h4>
+            <div class="pull-right upcoming">upcoming</div>
+        </div>
+    </div>
+</body>
+
+</html>
