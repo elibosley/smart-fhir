@@ -1,14 +1,23 @@
 body {
   font-family: "Ubuntu", sans-serif;
+  color: #2b4162;
 }
 .title-box {
   background: #f7a9a8;
-  padding: 15px;
+  padding: 20px;
 }
+
+.title-box h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
 .patient-box {
   background: #f0ebed;
+  margin-bottom: 15px;
 }
 .patient-info {
+  padding-top: 20px;
   padding-left: 5%;
   display: flex;
   flex-direction: column;
@@ -19,6 +28,7 @@ body {
 }
 .upcoming {
   color: #fac05e;
+  font-size: 14px;
 }
 h4 {
   font-size: 1rem;
@@ -26,8 +36,39 @@ h4 {
 h2 {
   text-transform: lowercase;
   font-weight: bold;
+  font-size: 1.5rem;
 }
 .profile-picture {
   width: 150px;
   height: 150px;
+}
+
+.immunization-name {
+  font-size: 16px;
+}
+
+.dose {
+  font-size: 12px;
+}
+
+.vaccine-icon {
+  width: 48px;
+}
+
+.clock-icon {
+  width: 20px;
+}
+.timeline-box {
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+.immunization-list-item {
+  padding: 5px;
+}
+ul {
+  padding-left: 0px;
+}
+.clockbox {
+  display: flex;
+  align-items: center;
 }

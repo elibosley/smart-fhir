@@ -41,41 +41,156 @@
         </div>
 
         <div class="row patient-box">
-            <img src="assets/profile_placeholder.png" alt="profile picture" class="img-responsive profile-picture">
-            <div class="patient-info">
-                <h2 id="patient-name" />
-                <h4 id="birthdate" />
-                <h4 id="gender" />
+            <div class="col">
+                <img src="assets/profile_placeholder.png" alt="profile picture" class="img-responsive profile-picture">
+            </div>
+            <div class="col patient-info">
+                <h2 id="patient-name" style="margin-left:-18px;" />
+                <h4>
+                    <ul>
+                        <li id="birthdate" />
+                        <li id="gender" />
+                        <li id="weight">16.5 pounds</li>
+                        <li id="height">26 inches</li>
+                    </ul>
+                </h4>
+
             </div>
         </div>
 
-        <div>
-            <h4>Birth</h4>
+        <div class="timeline-box">
+            <h2>Birth</h2>
             <div class="row">
-                <div class="col">Hepatitus B</div>
+                <div class="col-auto">
+                    <img src="assets/immunity vaccine icons/hepB logo.png" class="vaccine-icon">
+                </div>
+                <div class="col">Hepatitus B
+                    <div class="dose">1st dose</div>
+                </div>
                 <div class="col administered">Administered</div>
             </div>
         </div>
-        <div>
-            <h4>1 month</h4>
-            <div class="col">Hepatitus B</div>
-            <div class="col upcoming">between months 1 and 2</div>
-        </div>
-        <div>
-            <h4>2 months</h4>
-            <div class="row">
-                <div class="col">Hepatitus B</div>
-                <div class="col">between months 1 and 2</div>
-            </div>
-            <div class="row">
-                <div class="col">Hepatitus B</div>
-                <div class="col">between months 1 and 2</div>
+        <div class="timeline-box">
+            <h2>1 month</h2>
+            <div class="row immunization-list-item">
+                <div class="col-auto">
+                    <img src="assets/immunity vaccine icons/hepB logo month begin.png" class="vaccine-icon">
+                </div>
+                <div class="col">
+                    <div class="immunization-name">Hepatitus B</div>
+                    <div class="dose">2nd dose</div>
+                </div>
+                <div class="col upcoming">between months 1 and 2
+                </div>
             </div>
         </div>
-        <div>
-            <h4>4 months</h4>
-            <div class="pull-right upcoming">upcoming</div>
+        <div class="timeline-box">
+            <h2>2 months</h2>
+            <div class="row immunization-list-item">
+                <div class="col-auto">
+                    <img src="assets/immunity vaccine icons/hepB logo month end.png" class="vaccine-icon">
+                </div>
+                <div class="col">
+                    <div class="immunization-name">Hepatitus B</div>
+                    <div class="dose">2nd dose</div>
+                </div>
+                <div class="col upcoming">between months 1 and 2</div>
+            </div>
+
+            <div class="row immunization-list-item">
+                <div class="col-auto">
+                    <img src="assets/immunity vaccine icons/RV logo.png" class="vaccine-icon">
+                </div>
+                <div class="col">
+                    <div class="immunization-name">Rotavirus</div>
+                    <div class="dose">1st dose</div>
+                </div>
+                <div class="col upcoming">upcoming</div>
+            </div>
+
+
+            <div class="row immunization-list-item">
+                <div class="col-auto">
+                    <img src="assets/immunity vaccine icons/DTaP logo.png" class="vaccine-icon">
+                </div>
+                <div class="col">
+                    <div class="immunization-name">DTaP</div>
+                    <div class="dose">1st dose</div>
+                </div>
+                <div class="col upcoming">upcoming</div>
+            </div>
+
+            <div class="row immunization-list-item">
+                <div class="col-auto">
+                    <img src="assets/immunity vaccine icons/Hib logo.png" class="vaccine-icon">
+                </div>
+                <div class="col">
+                    <div class="immunization-name">Hib</div>
+                    <div class="dose">1st dose</div>
+                </div>
+                <div class="col upcoming">upcoming</div>
+            </div>
+
+            <div class="row immunization-list-item">
+                <div class="col-auto">
+                    <img src="assets/immunity vaccine icons/PCV13 logo.png" class="vaccine-icon">
+                </div>
+                <div class="col">
+                    <div class="immunization-name">PCV13</div>
+                    <div class="dose">1st dose</div>
+                </div>
+                <div class="col upcoming">upcoming</div>
+            </div>
         </div>
+        <div class="timeline-box">
+            <h2>4 months</h2>
+            <div class="row immunization-list-item">
+                <div class="col-auto">
+                    <img src="assets/immunity vaccine icons/RV logo.png" class="vaccine-icon">
+                </div>
+                <div class="col">
+                    <div class="immunization-name">Rotavirus</div>
+                    <div class="dose">2nd dose</div>
+                </div>
+                <div class="col upcoming">upcoming</div>
+            </div>
+
+
+            <div class="row immunization-list-item">
+                <div class="col-auto">
+                    <img src="assets/immunity vaccine icons/DTaP logo.png" class="vaccine-icon">
+                </div>
+                <div class="col">
+                    <div class="immunization-name">DTaP</div>
+                    <div class="dose">2nd dose</div>
+                </div>
+                <div class="col upcoming">upcoming</div>
+            </div>
+
+            <div class="row immunization-list-item">
+                <div class="col-auto">
+                    <img src="assets/immunity vaccine icons/Hib logo.png" class="vaccine-icon">
+                </div>
+                <div class="col">
+                    <div class="immunization-name">Hib</div>
+                    <div class="dose">2nd dose</div>
+                </div>
+                <div class="col upcoming">upcoming</div>
+            </div>
+
+            <div class="row immunization-list-item">
+                <div class="col-auto">
+                    <img src="assets/immunity vaccine icons/PCV13 logo.png" class="vaccine-icon">
+                </div>
+                <div class="col">
+                    <div class="immunization-name">PCV13</div>
+                    <div class="dose">2nd dose</div>
+                </div>
+                <div class="col upcoming">upcoming</div>
+            </div>
+
+        </div>
+    </div>
     </div>
 </body>
 
